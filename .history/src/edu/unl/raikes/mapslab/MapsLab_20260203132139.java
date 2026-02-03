@@ -91,7 +91,7 @@ public class MapsLab {
             for (String word : words) {
                 if (word.toLowerCase().indexOf(c) > 0) {
                     if (result.containsKey(c)) {
-                        Set<String> wordSet = result.get(c);
+                        Set<String> wordSet = result.get(word.length());
                         wordSet.add(word);
                         result.put(c, wordSet);
                     } else {

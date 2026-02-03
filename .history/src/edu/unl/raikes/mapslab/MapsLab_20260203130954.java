@@ -1,11 +1,8 @@
 package edu.unl.raikes.mapslab;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class MapsLab {
 
@@ -31,11 +28,9 @@ public class MapsLab {
      */
     public static Map<String, Integer> getWordFrequencies(String input) {
         String[] words = input.split(" +");
-        Map<String, Integer> wordFrequencies = new HashMap<String, Integer>();
-        for (String word : words) {
-            wordFrequencies.put(word, wordFrequencies.getOrDefault(word, 0) + 1);
-        }
-        return wordFrequencies;
+
+        // TODO: do the things
+        return null;
     }
 
     /**
@@ -51,20 +46,8 @@ public class MapsLab {
     public static Map<Integer, Set<String>> getWordsOfLengths(String input) {
         String[] words = input.split(" +");
 
-        Map<Integer, Set<String>> result = new HashMap<Integer, Set<String>>();
-
-        for (String word : words) {
-            if (result.containsKey(word.length())) {
-                Set<String> wordSet = result.get(word.length());
-                wordSet.add(word);
-                result.put(word.length(), wordSet);
-            } else {
-                Set<String> wordSet = new HashSet<String>();
-                wordSet.add(word);
-                result.put(word.length(), wordSet);
-            }
-        }
-        return result;
+        // TODO: do the things
+        return null;
     }
 
     /**
@@ -83,27 +66,7 @@ public class MapsLab {
         String[] words = input.split(" +");
 
         // TODO: do the things
-        Map<Character, Set<String>> result = new TreeMap<Character, Set<String>>();
-
-        String alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-        for (char c : alphabet.toCharArray()) {
-            for (String word : words) {
-                if (word.toLowerCase().indexOf(c) > 0) {
-                    if (result.containsKey(c)) {
-                        Set<String> wordSet = result.get(c);
-                        wordSet.add(word);
-                        result.put(c, wordSet);
-                    } else {
-                        Set<String> wordSet = new HashSet<String>();
-                        wordSet.add(word);
-                        result.put(c, wordSet);
-                    }
-                }
-            }
-        }
-
-        return result;
+        return null;
     }
 
     /**

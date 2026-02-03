@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class MapsLab {
 
@@ -83,27 +82,7 @@ public class MapsLab {
         String[] words = input.split(" +");
 
         // TODO: do the things
-        Map<Character, Set<String>> result = new TreeMap<Character, Set<String>>();
-
-        String alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-        for (char c : alphabet.toCharArray()) {
-            for (String word : words) {
-                if (word.toLowerCase().indexOf(c) > 0) {
-                    if (result.containsKey(c)) {
-                        Set<String> wordSet = result.get(c);
-                        wordSet.add(word);
-                        result.put(c, wordSet);
-                    } else {
-                        Set<String> wordSet = new HashSet<String>();
-                        wordSet.add(word);
-                        result.put(c, wordSet);
-                    }
-                }
-            }
-        }
-
-        return result;
+        return null;
     }
 
     /**
